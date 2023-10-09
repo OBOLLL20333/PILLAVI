@@ -6,6 +6,7 @@
 	<meta name="viewport" content="widdiv=device-widdiv, initial-scale=1.0">
 	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="./public/styles.css">
+	<link rel="stylesheet" href="./public/number.css">
 	<title>CALCULATOR</title>
 </head>
 
@@ -64,15 +65,14 @@
 				class=" border-2 border-grey-#9E9FA3  rounded-md py-10 px-8 border-spacing-0 w-full font-semibold text-center text-4xl text-black-#27282A">
 				<div class="flex items-center mb-12">
 					<p class="text-black-#37383C font-extrabold">Количество товара в штуках:</p>
-					<div class="border border-grey-#85868C bg-grey-#F4F4F4 rounded-md pl-4 flex items-center ml-10">
-						<div class="flex items-center">
-							<input type="text" value="1400" name="" id="" class="bg-grey-#F4F4F4">
-							<span class="text-grey-#77787B text-base ml-10">шт.</span>
-						</div>
-						<div class="flex flex-col ml-2.5 text-grey-#4A4A4A text-xl">
-							<button class="px-2 py-1 border-l border-b border-grey-#85868C">+</button>
-							<button class="px-2 py-1 border-l border-grey-#85868C">-</button>
-						</div>
+					<div class="border border-grey-#85868C bg-grey-#F4F4F4 rounded-md pl-4 flex items-center ml-10 h-16 relative">
+						<button class="absolute top-0 right-0 w-[27px] py-1 border-l border-b border-grey-#85868C" type="button"
+							onclick="this.nextElementSibling.stepUp(); this.nextElementSibling.onchange();">+</button>
+						<input type="number" value="1400" name="" id="col" class="bg-grey-#F4F4F4 w-40">
+						<button class="absolute bottom-0 right-0 w-[27px] py-1 border-l border-grey-#85868C"
+							onclick="this.previousElementSibling.stepDown(); this.previousElementSibling.onchange();"
+							type="button">-</button>
+						<label for="col" class="text-grey-#77787B text-base ml-10 mr-10">шт.</label>
 					</div>
 				</div>
 				<table class="border-separate border-spacing-0 w-full mb-12">
@@ -87,45 +87,49 @@
 						<tr>
 							<td class="border border-t-0 rounded-b-md border-grey-#85868C px-4 py-5">
 								<div class="flex items-center justify-around">
-									<div class="border border-grey-#85868C bg-grey-#F4F4F4 rounded-md pl-4 flex items-center">
-										<div class="flex items-center">
-											<div class="flex flex-col items-start">
-												<span class="text-xl text-grey-#5A5A5A">Длина:</span>
-												<input type="text" value="30" name="" id="" class="bg-grey-#F4F4F4 max-w-[150px]">
-											</div>
-											<span class="text-grey-#77787B text-base ml-10">см.</span>
+									<div
+										class="border border-grey-#85868C bg-grey-#F4F4F4 rounded-md pl-4 flex items-center h-16 relative">
+										<div class="flex flex-col items-start">
+											<label for="col" class="text-grey-#5A5A5A text-xl text-base">Длина:</label>
+											<button class="absolute top-0 right-0 w-[27px] py-1 border-l border-b border-grey-#85868C"
+												type="button"
+												onclick="this.nextElementSibling.stepUp(); this.nextElementSibling.onchange();">+</button>
+											<input type="number" value="1400" name="" id="col" class="bg-grey-#F4F4F4 w-40">
+											<button class="absolute bottom-0 right-0 w-[27px] py-1 border-l border-grey-#85868C"
+												onclick="this.previousElementSibling.stepDown(); this.previousElementSibling.onchange();"
+												type="button">-</button>
 										</div>
-										<div class="flex flex-col ml-2.5 text-grey-#4A4A4A text-xl">
-											<button class="px-2 py-1 border-l border-b border-grey-#85868C">+</button>
-											<button class="px-2 py-1 border-l border-grey-#85868C">-</button>
-										</div>
+										<label for="col" class="text-grey-#77787B text-base ml-10 mr-10">см.</label>
 									</div>
-									<div class="border border-grey-#85868C bg-grey-#F4F4F4 rounded-md pl-4 flex items-center">
-										<div class="flex items-center">
-											<div class="flex flex-col items-start">
-												<span class="text-xl text-grey-#5A5A5A">Ширина:</span>
-												<input type="text" value="20" name="" id="" class="bg-grey-#F4F4F4 max-w-[150px]">
-											</div>
-											<span class="text-grey-#77787B text-base ml-10">см.</span>
+									<div
+										class="border border-grey-#85868C bg-grey-#F4F4F4 rounded-md pl-4 flex items-center h-16 relative">
+										<div class="flex flex-col items-start">
+											<label for="col" class="text-grey-#5A5A5A text-xl">Ширина:</label>
+											<button class="absolute top-0 right-0 w-[27px] py-1 border-l border-b border-grey-#85868C"
+												type="button"
+												onclick="this.nextElementSibling.stepUp(); this.nextElementSibling.onchange();">+</button>
+											<input type="number" value="1400" name="" id="col" class="bg-grey-#F4F4F4 w-40">
+											<button class="absolute bottom-0 right-0 w-[27px] py-1 border-l border-grey-#85868C"
+												onclick="this.previousElementSibling.stepDown(); this.previousElementSibling.onchange();"
+												type="button">-</button>
 										</div>
-										<div class="flex flex-col ml-2.5 text-grey-#4A4A4A text-xl">
-											<button class="px-2 py-1 border-l border-b border-grey-#85868C">+</button>
-											<button class="px-2 py-1 border-l border-grey-#85868C">-</button>
-										</div>
+										<label for="col" class="text-grey-#77787B text-base ml-10 mr-10">см.</label>
 									</div>
-									<div class="border border-grey-#85868C bg-grey-#F4F4F4 rounded-md pl-4 flex items-center">
-										<div class="flex items-center">
-											<div class="flex flex-col items-start">
-												<span class="text-xl text-grey-#5A5A5A">Высота:</span>
-												<input type="text" value="8" name="" id="" class="bg-grey-#F4F4F4 max-w-[150px]">
-											</div>
-											<span class="text-grey-#77787B text-base ml-10">см.</span>
+									<div
+										class="border border-grey-#85868C bg-grey-#F4F4F4 rounded-md pl-4 flex items-center h-16 relative">
+										<div class="flex flex-col items-start">
+											<label for="col" class="text-grey-#5A5A5A text-xl">Высота:</label>
+											<button class="absolute top-0 right-0 w-[27px] py-1 border-l border-b border-grey-#85868C"
+												type="button"
+												onclick="this.nextElementSibling.stepUp(); this.nextElementSibling.onchange();">+</button>
+											<input type="number" value="1400" name="" id="col" class="bg-grey-#F4F4F4 w-40">
+											<button class="absolute bottom-0 right-0 w-[27px] py-1 border-l border-grey-#85868C"
+												onclick="this.previousElementSibling.stepDown(); this.previousElementSibling.onchange();"
+												type="button">-</button>
 										</div>
-										<div class="flex flex-col ml-2.5 text-grey-#4A4A4A text-xl">
-											<button class="px-2 py-1 border-l border-b border-grey-#85868C">+</button>
-											<button class="px-2 py-1 border-l border-grey-#85868C">-</button>
-										</div>
+										<label for="col" class="text-grey-#77787B text-base ml-10 mr-10">см.</label>
 									</div>
+
 								</div>
 							</td>
 						</tr>
@@ -923,9 +927,9 @@
 				</button>
 			</div>
 		</div>
-		<div
-			class="bg-[url('public/img/ContactUs.png')] after:bg-blue-#212E55/95 after:w-full after:h-full after:absolute relative after:top-0 pt-10 pb-16">
-			<div class="container w-[1280px] px-2.5 mx-auto relative z-10 text-white">
+		<div class="relative after:bg-blue-#212E55/95 after:w-full after:h-full after:absolute after:top-0">
+			<img src="./public/img/ContactUs.png" class="w-full h-full absolute " alt="">
+			<div class="container w-[1280px] px-2.5 mx-auto relative z-10 text-white pt-10 pb-16">
 				<h3 class="text-center text-9xl font-extrabold mb-8">Свяжитесь с нами:</h3>
 				<div class="flex items-center justify-center text-4xl font-semibold">
 					<button class="border border-green-#0AAF60 rounded-full px-8 py-5 flex items-center ">
